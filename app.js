@@ -6,6 +6,12 @@ HTMLElement.prototype.off = (a, b) => this.removeEventListener(a, b);
 HTMLElement.prototype.$ = (s) => this.querySelector(s);
 HTMLElement.prototype.$ = (s) => this.querySelectorAll(s);
 
+import Store from './services/Store.js';
+import API from './services/API.js';
+
+window.app = {}
+app.store = Store;
+
 
 // Event binding for initialization
 window.addEventListener("DOMContentLoaded", () => {
